@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="12" version="2.1" version_name="Godot Engine v2.1.stable.official">
+	<ext_resource path="res://images/enemy/blast_1.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://images/enemy/planeBlue1.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://images/enemy/blast_3.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://images/enemy/blast_2.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://player/enemy.gd" type="Script" index="0"></ext_resource>
+	<ext_resource path="res://images/sound/Hit_Hurt.wav" type="Sample" index="5"></ext_resource>
+	<resource type="RectangleShape2D" path="local://1">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 28, 28 </vector2>
+
+	</resource>
+	<resource type="SpriteFrames" path="local://2">
+		<array name="animations" len="1" shared="false">
+			<dictionary  shared="false">
+				<string> "frames" </string>
+				<array  len="4" shared="false">
+					<resource  external="1">  </resource>
+					<resource  external="2">  </resource>
+					<resource  external="3">  </resource>
+					<resource  external="4">  </resource>
+				</array>
+				<string> "loop" </string>
+				<bool> True </bool>
+				<string> "name" </string>
+				<string> "default" </string>
+				<string> "speed" </string>
+				<real> 5 </real>
+			</dictionary>
+		</array>
+
+	</resource>
+	<resource type="Animation" path="local://3">
+		<string name="resource/name"> "blast" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "AnimatedSprite:transform/pos" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<bool name="tracks/0/imported"> False </bool>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="1"> 				0 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="1"> 				1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="1" shared="false">
+				<vector2> 0, 0 </vector2>
+			</array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> "AnimatedSprite:transform/rot" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<bool name="tracks/1/imported"> False </bool>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="1"> 				0 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="1"> 				1 </real_array>
+			<string> "update" </string>
+			<int> 0 </int>
+			<string> "values" </string>
+			<array  len="1" shared="false">
+				<real> 0 </real>
+			</array>
+		</dictionary>
+		<string name="tracks/2/type"> "value" </string>
+		<node_path name="tracks/2/path"> "AnimatedSprite:frame" </node_path>
+		<int name="tracks/2/interp"> 1 </int>
+		<bool name="tracks/2/imported"> False </bool>
+		<dictionary name="tracks/2/keys" shared="false">
+			<string> "times" </string>
+			<real_array  len="5"> 				0.2, 0.4, 0.6, 0.8, 1 </real_array>
+			<string> "transitions" </string>
+			<real_array  len="5"> 				1, 1, 1, 1, 1 </real_array>
+			<string> "update" </string>
+			<int> 1 </int>
+			<string> "values" </string>
+			<array  len="5" shared="false">
+				<int> 1 </int>
+				<int> 2 </int>
+				<int> 2 </int>
+				<int> 3 </int>
+				<int> 2 </int>
+			</array>
+		</dictionary>
+
+	</resource>
+	<resource type="SampleLibrary" path="local://4">
+		<dictionary name="samples/hurt" shared="false">
+			<string> "db" </string>
+			<real> 0 </real>
+			<string> "pitch" </string>
+			<real> 1 </real>
+			<string> "sample" </string>
+			<resource  external="5">  </resource>
+		</dictionary>
+
+	</resource>
+	<resource type="SampleLibrary" path="local://5">
+
+	</resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 1 </int>
+			<string> "conns" </string>
+			<int_array  len="6"> 				1, 0, 57, 56, 2, 0 </int_array>
+			<string> "editable_instances" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "names" </string>
+			<string_array  len="58">
+				<string> "enemy" </string>
+				<string> "transform/rot" </string>
+				<string> "transform/scale" </string>
+				<string> "input/pickable" </string>
+				<string> "collision/layers" </string>
+				<string> "collision/mask" </string>
+				<string> "collision/margin" </string>
+				<string> "script/script" </string>
+				<string> "KinematicBody2D" </string>
+				<string> "Area2D" </string>
+				<string> "transform/pos" </string>
+				<string> "shapes/0/shape" </string>
+				<string> "shapes/0/transform" </string>
+				<string> "shapes/0/trigger" </string>
+				<string> "gravity_vec" </string>
+				<string> "gravity" </string>
+				<string> "linear_damp" </string>
+				<string> "angular_damp" </string>
+				<string> "CollisionShape2D" </string>
+				<string> "shape" </string>
+				<string> "trigger" </string>
+				<string> "_update_shape_index" </string>
+				<string> "AnimatedSprite" </string>
+				<string> "frames" </string>
+				<string> "animation" </string>
+				<string> "flip_h" </string>
+				<string> "AnimationPlayer" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/default_blend_time" </string>
+				<string> "root/root" </string>
+				<string> "anims/blast" </string>
+				<string> "playback/active" </string>
+				<string> "playback/speed" </string>
+				<string> "blend_times" </string>
+				<string> "autoplay" </string>
+				<string> "SamplePlayer" </string>
+				<string> "config/polyphony" </string>
+				<string> "config/samples" </string>
+				<string> "default/volume_db" </string>
+				<string> "default/pitch_scale" </string>
+				<string> "default/pan" </string>
+				<string> "default/depth" </string>
+				<string> "default/height" </string>
+				<string> "default/filter/type" </string>
+				<string> "default/filter/cutoff" </string>
+				<string> "default/filter/resonance" </string>
+				<string> "default/filter/gain" </string>
+				<string> "default/reverb_room" </string>
+				<string> "default/reverb_send" </string>
+				<string> "default/chorus_send" </string>
+				<string> "Timer" </string>
+				<string> "process_mode" </string>
+				<string> "wait_time" </string>
+				<string> "one_shot" </string>
+				<string> "autostart" </string>
+				<string> "player_hit" </string>
+				<string> "_on_Area2D_body_enter" </string>
+				<string> "body_enter" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 8 </int>
+			<string> "node_paths" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "nodes" </string>
+			<int_array  len="186"> 				-1, -1, 8, 0, -1, 7, 1, 0, 2, 1, 3, 2, 4, 3, 5, 3, 6, 4, 7, 5, 0, 0, 0, 9, 9, -1, 10, 10, 6, 2, 7, 3, 8, 11, 9, 12, 10, 13, 2, 14, 11, 15, 12, 16, 13, 17, 14, 0, 1, 0, 18, 18, -1, 5, 10, 15, 2, 16, 19, 9, 20, 2, 21, 17, 0, 0, 0, 22, 22, -1, 3, 23, 18, 24, 19, 25, 8, 0, 0, 0, 26, 26, -1, 8, 27, 3, 28, 20, 29, 21, 30, 22, 31, 8, 32, 14, 33, 23, 34, 24, 0, 0, 0, 35, 35, -1, 14, 36, 3, 37, 25, 38, 20, 39, 14, 40, 20, 41, 20, 42, 20, 43, 17, 44, 26, 45, 14, 46, 14, 47, 27, 48, 20, 49, 20, 0, 0, 0, 50, 50, -1, 4, 51, 3, 52, 14, 53, 2, 54, 2, 0, 0, 0, 35, 55, -1, 14, 36, 3, 37, 28, 38, 20, 39, 14, 40, 20, 41, 20, 42, 20, 43, 17, 44, 26, 45, 14, 46, 14, 47, 27, 48, 20, 49, 20, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="29" shared="false">
+				<real> -355.406158 </real>
+				<vector2> -0.572756, 0.496087 </vector2>
+				<bool> False </bool>
+				<int> 1 </int>
+				<real> 0.08 </real>
+				<resource  external="0">  </resource>
+				<vector2> 1.63501, 3.31424 </vector2>
+				<vector2> 1.50216, 1.10357 </vector2>
+				<bool> True </bool>
+				<resource  resource_type="Shape2D" path="local://1">  </resource>
+				<matrix32> 0.66571, 0, 0, 0.90615, -1.08844, -3.0032 </matrix32>
+				<vector2> 0, 1 </vector2>
+				<real> 98 </real>
+				<real> 0.1 </real>
+				<real> 1 </real>
+				<vector2> -1.08844, -3.0032 </vector2>
+				<vector2> 0.66571, 0.90615 </vector2>
+				<int> 0 </int>
+				<resource  resource_type="SpriteFrames" path="local://2">  </resource>
+				<string> "default" </string>
+				<real> 0 </real>
+				<node_path> ".." </node_path>
+				<resource  resource_type="Animation" path="local://3">  </resource>
+				<array  len="0" shared="false">
+				</array>
+				<string> "" </string>
+				<resource  resource_type="SampleLibrary" path="local://4">  </resource>
+				<real> 5000 </real>
+				<int> 2 </int>
+				<resource  resource_type="SampleLibrary" path="local://5">  </resource>
+			</array>
+			<string> "version" </string>
+			<int> 2 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>

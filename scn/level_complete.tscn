@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://Scripts/level_complete.gd" type="Script" id=1]
+[ext_resource path="res://images/level_editors/background.png" type="Texture" id=2]
+[ext_resource path="res://images/level_editors/level_complete.png" type="Texture" id=3]
+[ext_resource path="res://images/level_editors/next_level.png" type="Texture" id=4]
+
+[node name="level_complete" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+
+transform/pos = Vector2( 424.284, 180.543 )
+transform/scale = Vector2( 2.72312, 1.49174 )
+texture = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="Sprite"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 346.0
+margin/top = 303.0
+margin/right = 486.0
+margin/bottom = 449.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+
+[connection signal="pressed" from="Sprite/TextureButton" to="." method="_on_TextureButton_pressed"]
+
+
